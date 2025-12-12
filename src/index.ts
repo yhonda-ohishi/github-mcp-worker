@@ -43,7 +43,7 @@ app.post("/oauth/token", handleToken);
 app.post("/oauth/register", async (c) => {
   const body = await c.req.json();
   const clientId = crypto.randomUUID();
-  
+
   return c.json({
     client_id: clientId,
     client_name: body.client_name || "MCP Client",
@@ -65,7 +65,7 @@ app.get("/mcp/sse", (c) => {
 // Documentation
 app.get("/docs", (c) => {
   const serverUrl = c.env.SERVER_URL;
-  
+
   return c.html(`
     <!DOCTYPE html>
     <html>
@@ -81,7 +81,7 @@ app.get("/docs", (c) => {
     <body>
       <h1>GitHub MCP Server</h1>
       <p>A Model Context Protocol server for GitHub API integration.</p>
-      
+
       <h2>Integration with Claude.ai</h2>
       <ol>
         <li>Go to Claude.ai Settings → Integrations</li>
@@ -90,7 +90,7 @@ app.get("/docs", (c) => {
         <li>Enter URL: <code>${serverUrl}</code></li>
         <li>Click "Connect" and authorize with GitHub</li>
       </ol>
-      
+
       <h2>Available Tools</h2>
       <ul>
         <li><strong>list_repos</strong> - List your repositories</li>
@@ -107,7 +107,7 @@ app.get("/docs", (c) => {
         <li><strong>search_repos</strong> - Search repositories</li>
         <li><strong>search_code</strong> - Search code</li>
       </ul>
-      
+
       <h2>API Endpoints</h2>
       <ul>
         <li><code>GET /.well-known/oauth-protected-resource</code> - Resource metadata</li>
