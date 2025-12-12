@@ -1,0 +1,18 @@
+name = "github-mcp-server"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+# KV Namespace for session/token storage
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "8c8852d1d5af4b5483a6b0e4453ea1a2"
+
+# Environment variables (set via wrangler secret)
+# GITHUB_CLIENT_ID - GitHub OAuth App Client ID
+# GITHUB_CLIENT_SECRET - GitHub OAuth App Client Secret
+# JWT_SECRET - Secret for signing JWTs
+# SERVER_URL - Your Workers URL (e.g., https://github-mcp-server.your-account.workers.dev)
+
+[vars]
+# Non-secret variables can go here
+OAUTH_SCOPES = "repo,read:user"
