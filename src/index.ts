@@ -25,7 +25,7 @@ app.use("*", cors({
 app.get("/", (c) => {
   return c.json({
     name: "GitHub MCP Server",
-    version: "1.0.0",
+    version: "1.0.1",
     status: "ok",
   });
 });
