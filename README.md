@@ -1,5 +1,7 @@
 # GitHub MCP Server
 
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/yhonda-ohishi/github-mcp-worker)
+
 Claude.ai用のGitHub MCP（Model Context Protocol）サーバー。Cloudflare Workersで動作。
 
 ## 機能
