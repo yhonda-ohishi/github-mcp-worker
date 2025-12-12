@@ -16,3 +16,6 @@ id = "8c8852d1d5af4b5483a6b0e4453ea1a2"
 [vars]
 # Non-secret variables can go here
 OAUTH_SCOPES = "repo,read:user"
+
+[observability]
+enabled = true
